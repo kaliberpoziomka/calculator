@@ -10,6 +10,8 @@ let savedSymbol3 = '';
 let result1 = '';
 let result2 = '';
 let output = '';
+let dark = 0;
+
 
 // mapping buttons
 
@@ -52,22 +54,35 @@ document.addEventListener("keydown", (event) => {
     for(let i = 0; i < keyCodes.length; i++) {
         if(event.keyCode === keyCodes[i] || event.keyCode === keyPadCodes[i]) {
             display(ar[i].textContent);
+            ar[i].focus();
         } else if(event.keyCode === operatorKeyCodes[i]) {
-                    currentSymbol = `${ar2[i].textContent}`
+                    currentSymbol = `${ar2[i].textContent}`;
                    operatorFunctions();
+                   ar2[i].focus();
                 }
             }          
          if(event.keyCode === 13) {
             evenFunction();
+            even.focus();
         } else if(event.keyCode === 8) {
             if(output != '') {
                 reset();
+                AC.focus();
             } else {
                 deleteOne();
+                del.focus();
             }
         }
     
 })
+
+switchMode.addEventListener("click", () => {
+    if (dark == 0){
+        changeCSS();
+    } else if (dark == 1) {
+        backCSS();
+    }
+});
 
 AC.addEventListener("click", () => reset());
 
@@ -168,7 +183,7 @@ function operate (operator, a, b) {
 
 // display functions
 function display (inputNumber) {
-    if(currentValue.length > 13) {
+    if(currentValue.length > 23) {
         currentValue = currentValue.slice(1);
         currentValue += inputNumber;
         screen.textContent = currentValue;
@@ -264,3 +279,15 @@ function calculateEven () {
         
     }
 }
+
+// change CSS style
+
+function changeCSS() {
+    document.getElementById("styleLink").href="styleDark.css";
+    dark = 1;
+};
+
+function backCSS() {
+    document.getElementById("styleLink").href="style.css";
+    dark = 0;
+};
