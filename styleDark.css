@@ -16,6 +16,16 @@ button{
     border: none;
 }
 
+:root {
+	--primary: #22d3a1;
+	--secondary: #192824;
+	--background: #192824;
+	--green: #1fc11b;
+	--yellow: #ffd913;
+	--orange: #ff9c55;
+	--red: #ff5555;
+  }
+
 *:focus{
     outline: none;
 }
@@ -70,10 +80,7 @@ cursor:pointer;
         
 
 #switchMode{
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-left: 2px;
-    padding-right: 2px;
+    margin-left: 15px;
 }
 
 
@@ -118,6 +125,51 @@ cursor:pointer;
 		padding-right: 30px;
 		max-width: 630px;
 
+}
+
+#reset{
+	color: var(--red);
+}
+
+#reset:hover,
+#reset:focus{
+	text-shadow: 0px 0px 10px var(--red);
+}
+
+#divide{
+	color: var(--green);
+}
+
+#divide:hover,
+#divide:active{
+	text-shadow: 1px 1px 6px var(--green);
+}
+
+#multiply{
+	color: var(--primary);
+}
+
+#multiply:hover,
+#multiply:active{
+	text-shadow: 1px 1px 6px var(--primary);
+}
+
+#substract{
+	color: var(--orange);
+}
+
+#substract:hover,
+#substract:active{
+	text-shadow: 1px 1px 6px var(--orange);
+}
+
+#add{
+	color: var(--yellow);
+}
+
+#add:hover,
+#add:active{
+	text-shadow: 1px 1px 6px var(--yellow);
 }
 
 
