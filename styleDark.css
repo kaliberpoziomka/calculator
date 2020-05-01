@@ -24,6 +24,7 @@ button{
 	--yellow: #ffd913;
 	--orange: #ff9c55;
 	--red: #ff5555;
+	--pink: #ff1493;
   }
 
 *:focus{
@@ -58,6 +59,7 @@ cursor:pointer;
 		border-top:2px solid rgb(0, 0, 0);
 		border-left:2px solid rgb(0, 0, 0);
 	}
+
 	.btn:before{
 		bottom:-5px;
 		right:-5px;
@@ -127,50 +129,93 @@ cursor:pointer;
 
 }
 
-#reset{
-	color: var(--red);
-}
+
 
 #reset:hover,
 #reset:focus{
+	color: var(--red);
 	text-shadow: 0px 0px 10px var(--red);
 }
-
-#divide{
-	color: var(--green);
+#reset:focus:before,
+#reset:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--red);
 }
+
 
 #divide:hover,
-#divide:active{
+#divide:focus{
+	color: var(--green);
 	text-shadow: 1px 1px 6px var(--green);
 }
-
-#multiply{
-	color: var(--primary);
+#divide:focus:before,
+#divide:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--green);
 }
 
 #multiply:hover,
-#multiply:active{
+#multiply:focus{
+	color: var(--primary);
 	text-shadow: 1px 1px 6px var(--primary);
 }
-
-#substract{
-	color: var(--orange);
+#multiply:focus:before,
+#multiply:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--primary);
 }
 
 #substract:hover,
-#substract:active{
+#substract:focus{
+	color: var(--orange);
 	text-shadow: 1px 1px 6px var(--orange);
 }
-
-#add{
-	color: var(--yellow);
+#substract:focus:before,
+#substract:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--orange);
 }
 
 #add:hover,
-#add:active{
+#add:focus{
+	color: var(--yellow);
 	text-shadow: 1px 1px 6px var(--yellow);
 }
+#add:focus:before,
+#add:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--yellow);
+}
+
+#even:hover,
+#even:focus{
+	color: var(--pink);
+	text-shadow: 1px 1px 6px var(--pink);
+}
+#even:focus:before,
+#even:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--pink);
+}
+
+#delete:hover,
+#delete:focus{
+	color: var(--red);
+	text-shadow: 1px 1px 6px var(--red);
+}
+#delete:focus:before,
+#delete:focus:after{
+	width:100%;
+	height:100%;
+	border-color: var(--red);
+}
+
 
 
 @media screen and (max-width:320px) {
